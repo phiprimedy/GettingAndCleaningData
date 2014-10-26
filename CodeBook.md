@@ -1,10 +1,12 @@
 Data Dictionary
 ================
+`
 1. ActivityName - activity name.   
 Possible values are LAYING,SITTING,STANDING,WALKING, WALKING\_DOWNSTAIRS and WALKING\_UPSTAIRS
 2. SubjectId - integer subject identifier that indentifies one of the 30 subjects.  
 Possible values are integers from 1 to 30.
-
+`  
+  
 The remaining 66 variables (number 3 through 68 below) are the average/mean of 
 the corresponding source dataset variable over a particular ActivityName and 
 FeatureName combination. They are all numeric and in the range [-1,1].
@@ -30,11 +32,12 @@ does not allow the _(_, _)_ and _-_ characters in variable names.
 
 Conceptually related variables are grouped together in the listing below.
 
+`
 3. tBodyAcc.mean.X.avg
 4. tBodyAcc.mean.Y.avg 
-5. tBodyAcc.mean.Z.avg 
+5. tBodyAcc.mean.Z.avg
 6. tBodyAcc.std.X.avg
-7. tBodyAcc.std.Y.avg 
+7. tBodyAcc.std.Y.avg
 8. tBodyAcc.std.Z.avg 
   
 9. tGravityAcc.mean.X.avg
@@ -111,3 +114,4 @@ Conceptually related variables are grouped together in the listing below.
   
 67. fBodyBodyGyroJerkMag.mean.avg
 68. fBodyBodyGyroJerkMag.std.avg
+`

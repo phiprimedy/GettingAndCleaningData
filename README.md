@@ -1,4 +1,4 @@
-The R script run\_analysis.R generates a tidy set from the source Samsung UCI HAR Dataset
+The R script run_analysis.R generates a tidy set from the source Samsung UCI HAR Dataset
 as described below :-
 
 1. Merges the training and the test sets to create one data set.
@@ -23,18 +23,17 @@ run_analysis.R script generates the tidy data set.
 It expects the unzipped Samsung UCI HAR dataset in the current working 
 directory i.e. we should have the following structure under the current 
 directory :-  
-    UCI HAR Dataset  
-                    activity_labels.txt, features.txt,  
-                    features_info.txt,README.txt  
-                    + test  
+    *UCI HAR Dataset*  
+                    activity_labels.txt, features.txt,  features_info.txt,README.txt  
+                    *+ test*  
                        ...  
-                    + train  
+                    *+ train*  
                        ...  
 
 
 Output File
 ============
-run\_analysis.R produces output file avg\_data\_tidy.txt in the current directory.
+run_analysis.R produces output file avg_data_tidy.txt in the current directory.
 
 This output file contains a tidy data set. For each activity and each subject, it 
 contains the average/mean of certain _selected_ variables from the source 
