@@ -14,7 +14,7 @@ Refer the subsequent sections and the comments in run|analysis.R for more
 information on these steps.
 
 The detailed listing of the variables in the output tidy data set are provided
-in CodeBook.md.
+in _CodeBook.md_.
 
 Running the script
 ===================
@@ -49,13 +49,14 @@ source data set, 66 variables get selected by this criterion.
 The corresponding output file variable names are suffixed with _.avg_ to indicate 
 that they are averages, per activity+subject, of the source variables, which in 
 turn are either the mean() or std() of the measured signal variables all within the 
-source dataset as explained above. Note that the '(', ')' and '-' characters in 
+source dataset as explained above. Note that the _(_, _)_ and _-_ characters in 
 variable names are not allowed by read.table and are automatically converted into
-'.'. So we strip '(' and ')' and replace '-' with '.' for the feature variable
+_._ (dot). So we strip _(_ and _)_ and replace _-_ with _._ for the feature variable
 names.  
-e.g. for the source variable fBodyAccMag-mean(), the output average variable is
-fBodyAccMag.mean.avg and it contains the mean of fBodyAccMag-mean() values for
-each SubjectId and ActivityName (which are the other 2 variables).
+
+e.g. for the source variable _fBodyAccMag-mean()_, the output average variable is
+_fBodyAccMag.mean.avg_ and it contains the mean of _fBodyAccMag-mean()_ values for
+each _SubjectId_ and _ActivityName_ (which are the other 2 variables) combination.
 
 Since there are 30 SubjectIds and 6 ActivityNames, the output dataset has 30x6=180
 rows plus the header with variable names. The number of variables are 66+2=68.
