@@ -26,11 +26,10 @@ directory :-
     UCI HAR Dataset  
                     activity_labels.txt, features.txt,  
                     features_info.txt,README.txt  
-                    
-                    + test
-                       ...
-                    + train
-                       ...
+                    + test  
+                       ...  
+                    + train  
+                       ...  
 
 
 Output File
@@ -38,23 +37,23 @@ Output File
 run\_analysis.R produces output file avg\_data\_tidy.txt in the current directory.
 
 This output file contains a tidy data set. For each activity and each subject, it 
-contains the average/mean of certain selected variables from the source 
+contains the average/mean of certain _selected_ variables from the source 
 Samsung UCI HAR dataset. The training and test subsets of the source dataset
 are combined together before the averages are computed.
 
-These selected variables from the source dataset (referred to above) are the 
+The _selected_ variables from the source dataset referred to above are the 
 ones which are the mean and standard deviation of certain measured signals 
-i.e. they have mean() or std() in their names as per the 
+i.e. they have _mean()_ or _std()_ in their names as per the 
 features_info.txt document. Out of the 561 variables that are present in the
 source data set, 66 variables get selected by this criterion.
 
-The corresponding output file variable names are suffixed with ".avg" to indicate 
-that they are averages, per activity+subject, of the source variables - which in 
-turn are either mean() or std() of the measured signal variables all within the 
+The corresponding output file variable names are suffixed with _.avg_ to indicate 
+that they are averages, per activity+subject, of the source variables, which in 
+turn are either the mean() or std() of the measured signal variables all within the 
 source dataset as explained above. Note that the '(', ')' and '-' characters in 
 variable names are not allowed by read.table and are automatically converted into
 '.'. So we strip '(' and ')' and replace '-' with '.' for the feature variable
-names.
+names.  
 e.g. for the source variable fBodyAccMag-mean(), the output average variable is
 fBodyAccMag.mean.avg and it contains the mean of fBodyAccMag-mean() values for
 each SubjectId and ActivityName (which are the other 2 variables).
@@ -62,5 +61,5 @@ each SubjectId and ActivityName (which are the other 2 variables).
 Since there are 30 SubjectIds and 6 ActivityNames, the output dataset has 30x6=180
 rows plus the header with variable names. The number of variables are 66+2=68.
 
-The generated tidy dataset can be read into an R data frame as follows :-
+The generated tidy dataset can be read into an R data frame as follows :-  
 avg\_data <- read.table('avg\_data_tidy.txt', header=TRUE)
