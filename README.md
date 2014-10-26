@@ -23,11 +23,11 @@ run_analysis.R script generates the tidy data set.
 It expects the unzipped Samsung UCI HAR dataset in the current working 
 directory i.e. we should have the following structure under the current 
 directory :-  
-    *UCI HAR Dataset*  
+    **UCI HAR Dataset**    
                     activity_labels.txt, features.txt,  features_info.txt,README.txt  
-                    *+ test*  
+                    **+ test**  
                        ...  
-                    *+ train*  
+                    **+ train**  
                        ...  
 
 
@@ -61,4 +61,4 @@ Since there are 30 SubjectIds and 6 ActivityNames, the output dataset has 30x6=1
 rows plus the header with variable names. The number of variables are 66+2=68.
 
 The generated tidy dataset can be read into an R data frame as follows :-  
-avg\_data <- read.table('avg\_data_tidy.txt', header=TRUE)
+avg_data <- read.table('avg_data_tidy.txt', header=TRUE)
